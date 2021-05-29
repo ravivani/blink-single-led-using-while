@@ -1,0 +1,53 @@
+/***
+-----------------------------------------------------------------
+
+This circuit description is ON & OFF STATE of LED using while.
+
+In this circuit it contains single LED.
+
+Postive terminal of LED is a Anode , Negative terminal of LED is a cathode.
+
+For LED there are two pins which are anode and cathode.
+
+Anode is connected to power , in between one resister is used to avoid the LED breaks ,it also control current flow.
+
+Resistor formule is R = V/I,for LED min 220 ohms is used.
+
+Cathode is connected to ground.
+
+Pins can be connected to either analog nor digital pins.
+
+-----------------------------------------------------------------
+***/
+
+// Here we are initializing the pins numbers to the variable.
+int led = 12;
+
+void setup()
+{
+  // Assigning the variable to the pinMode.
+  pinMode(led, OUTPUT);
+  // Initializing the pins LOW STATE.
+  digitalWrite(led, LOW);
+  
+}
+
+void loop()
+{
+  /***
+  -------------------------------------------------------------
+  Pre Condition: The LED is in the LOW state before starting.
+  Post Condition: The LED will ON when it starts (LOW STATE TO HIGH STATE).
+  ---------------------------------------------------------------
+  ***/
+  while(1)
+  {
+    // LED is ON when it is HIGH
+  digitalWrite(led, HIGH);
+  delay(1000); // small delay.
+  
+  // LED is OFF when it is LOW
+  digitalWrite(led, LOW);
+  delay(1000); // small delay.
+  } 
+}
